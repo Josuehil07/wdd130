@@ -202,10 +202,9 @@ footer {
 }
 
 .social-links img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Keeps icons white */
 }
 
 .social-links img:hover {
@@ -256,5 +255,15 @@ footer {
     
     .social-links {
         justify-content: center;
+    }
+    .social-links a {
+  background: var(--accent-color); /* e.g., #C44536 */
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
     }
 }
