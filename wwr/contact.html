@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - White Water Rafting</title>
+    <title>Contact Us | Whitewater Rafting Co.</title>
+    <meta name="description" content="Contact Whitewater Rafting Co. for inquiries, reservations, or website suggestions. Find our location, phone, and email.">
     <link rel="stylesheet" href="styles/rafting.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -14,65 +15,107 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="trips.html">Trips</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Rafting Adventure">
-            <h1>White Water Rafting</h1>
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy Client">
-                <p>Our mission is to provide unforgettable rafting experiences with the highest safety standards while preserving the natural beauty of our rivers.</p>
-            </article>
+    <main class="contact-main">
+        <h1>Contact Whitewater Rafting Co.</h1>
+        
+        <div class="contact-container">
+            <section class="contact-info">
+                <h2>Our Office</h2>
+                <address>
+                    <p>123 River Run Drive<br>
+                    Rapid City, RC 12345</p>
+                    <p>Phone: <a href="tel:+18005551234">(800) 555-1234</a></p>
+                    <p>Email: <a href="mailto:info@wwrafting.com">info@wwrafting.com</a></p>
+                </address>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-123.456789!3d45.678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQwJzQ0LjAiTiAxMjPCsDI3JzI0LjQiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                        allowfullscreen 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Our Location on Google Maps">
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="purpose-fieldset">
+                        <legend>Purpose of Message</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="inquiry" name="purpose" value="general" checked>
+                            <label for="inquiry">General Inquiry</label>
+                            
+                            <input type="radio" id="reservation" name="purpose" value="reservation">
+                            <label for="reservation">Reservation Question</label>
+                            
+                            <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                            <label for="suggestion">Website Suggestion</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group newsletter-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
         </div>
 
-        <section class="history">
-            <h2>Our History</h2>
-            <div class="history-content">
-                <img src="images/history1.jpg" alt="Early Days">
-                <p>Founded in 1995 by river enthusiast John Riverstone, we started with just two rafts and a passion for adventure. Over 25 years, we've grown to become the premier rafting company in the region while maintaining our commitment to safety and environmental stewardship.</p>
-                <img src="images/history2.jpg" alt="Current Operations">
-            </div>
-        </section>
-
-        <section class="adventures">
-            <h2>Adventure Awaits You!</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/rapid1.jpg" alt="Los Dientes del Diablo">
-                    <figcaption>Los Dientes del Diablo</figcaption>
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="employee-profiles">
+                <figure class="employee">
+                    <img src="images/employee1.jpg" alt="Sarah Johnson - Rafting Guide">
+                    <figcaption>Sarah Johnson<br><span>Head Rafting Guide</span></figcaption>
                 </figure>
-                <figure>
-                    <img src="images/rapid2.jpg" alt="Big Mallard">
-                    <figcaption>Big Mallard</figcaption>
+                <figure class="employee">
+                    <img src="images/employee2.jpg" alt="Mike Chen - Safety Instructor">
+                    <figcaption>Mike Chen<br><span>Safety Instructor</span></figcaption>
                 </figure>
-                <figure>
-                    <img src="images/rapid3.jpg" alt="Half Day Adventure">
-                    <figcaption>Half Day Adventure</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rapid4.jpg" alt="Wild Rapids">
-                    <figcaption>Wild Rapids</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rapid5.jpg" alt="Sunset Cruise">
-                    <figcaption>Sunset Cruise</figcaption>
+                <figure class="employee">
+                    <img src="images/employee3.jpg" alt="Emily Rodriguez - Customer Service">
+                    <figcaption>Emily Rodriguez<br><span>Customer Service</span></figcaption>
                 </figure>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 White Water Rafting | Created by [Your Name]</p>
+        <p>&copy; 2023 White Water Rafting Co. | Created by [Your Name]</p>
         <div class="social-links">
             <a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="images/twitter.svg" alt="Twitter"></a>
             <a href="https://instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
         </div>
+        <p class="wireframe-link"><a href="contact-wireframe.png" target="_blank">View Contact Page Wireframe</a></p>
     </footer>
 </body>
 </html>
