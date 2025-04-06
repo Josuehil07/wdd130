@@ -191,25 +191,27 @@ footer {
     grid-template-columns: 1fr auto;
     align-items: center;
     background-color: #283D3B; /* Dark teal */
-    color: var(--text-light);
-    padding: 1rem;
+    color: white;
+    padding: 1.5rem;
     margin-top: 2rem;
 }
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .social-links img {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
   filter: brightness(0) invert(1); /* White icons */
 }
 
 .social-links img:hover {
-    transform: scale(1.2);
+     transform: scale(1.15);
 }
 
 /* Responsive Design */
