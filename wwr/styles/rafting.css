@@ -803,13 +803,15 @@ footer a:hover {
     height: auto;
     width: 80px;
     display: block;
+    position: relative;
+    z-index: 1001; /* Higher than header */
 }
 
 /* ===== HERO FIX ===== */
 ..hero {
     position: relative;
     z-index: 1;
-    margin-top: -1px; /* Remove any default margin */
+    margin-top: -20px; /* Remove any default margin */
 }
 
 .hero-image {
