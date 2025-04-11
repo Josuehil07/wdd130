@@ -3,69 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Trips | Splash Whitewater Rafting</title>
-<meta name="description" content="Explore our thrilling rafting trips with detailed packages, pricing, and photos. Book your adventure today!">
+    <title>Adventure Packages | Whitewater Rafting</title>
+    <meta name="description" content="Explore our exciting whitewater rafting trips with detailed itineraries, difficulty levels, and pricing. Book your adventure today!">
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Splash Whitewater Rafting</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Rafting Company Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html" class="active">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main class="trips-main">
-        <!-- Call-to-Action Banner -->
-        <section class="cta-banner">
-            <h2>Ready for Adventure?</h2>
-            <a href="contact.html" class="cta-button">Contact Us to Book</a>
+
+    <main class="trips-container">
+        <!-- Hero Section with CTA -->
+        <section class="trips-hero">
+            <div class="hero-content">
+                <h1>Your Next Adventure Awaits</h1>
+                <p>Experience the thrill of whitewater rafting with our expert guides</p>
+                <a href="contact.html" class="cta-button">Book Your Trip Now</a>
+            </div>
         </section>
 
-        <!-- Featured Trips -->
-        <section class="trip-highlights">
+        <!-- Featured Trips Section -->
+        <section class="featured-trips">
             <h2>Our Signature Adventures</h2>
-            
-            <div class="trip-card">
-                <img src="images/trip1.jpg" alt="Half-Day Rafting">
-                <h3>Half-Day Rush</h3>
-                <p>Perfect for beginners! 3-hour trip through Class II-III rapids.</p>
-                <ul>
-                    <li>Duration: 3 hours</li>
-                    <li>Difficulty: Beginner</li>
-                    <li>Price: $75/person</li>
-                </ul>
-            </div>
+            <div class="trip-grid">
+                <!-- Trip 1 -->
+                <article class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/half-day.jpg" alt="Half Day Adventure">
+                        <span class="difficulty-badge beginner">Beginner</span>
+                    </div>
+                    <div class="trip-info">
+                        <h3>Half Day Adventure</h3>
+                        <p>Perfect for first-timers! This 4-hour trip features Class II-III rapids with calm stretches for swimming.</p>
+                        <ul class="trip-details">
+                            <li>⏱️ 4 hours</li>
+                            <li>👨‍👩‍👧‍👦 Ages 8+</li>
+                            <li>💰 $89/person</li>
+                        </ul>
+                        <a href="#trip-table" class="secondary-button">Details</a>
+                    </div>
+                </article>
 
-            <!-- Repeat for 2 more trip cards -->
+                <!-- Trip 2 -->
+                <article class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/full-day.jpg" alt="Full Day Challenge">
+                        <span class="difficulty-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="trip-info">
+                        <h3>Full Day Challenge</h3>
+                        <p>Our most popular trip! 8 hours of Class III-IV rapids with a riverside lunch included.</p>
+                        <ul class="trip-details">
+                            <li>⏱️ 8 hours</li>
+                            <li>👨‍👩‍👧‍👦 Ages 12+</li>
+                            <li>💰 $149/person</li>
+                        </ul>
+                        <a href="#trip-table" class="secondary-button">Details</a>
+                    </div>
+                </article>
+
+                <!-- Trip 3 -->
+                <article class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/multi-day.jpg" alt="Multi-Day Expedition">
+                        <span class="difficulty-badge advanced">Advanced</span>
+                    </div>
+                    <div class="trip-info">
+                        <h3>Multi-Day Expedition</h3>
+                        <p>For true adventurers! 3 days of Class IV-V rapids with overnight camping under the stars.</p>
+                        <ul class="trip-details">
+                            <li>⏱️ 3 days</li>
+                            <li>👨‍👩‍👧‍👦 Ages 16+</li>
+                            <li>💰 $499/person</li>
+                        </ul>
+                        <a href="#trip-table" class="secondary-button">Details</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <!-- Trip Comparison Table -->
-        <section class="trip-table">
-            <h2>All Adventure Packages</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Trip</th>
-                        <th>Duration</th>
-                        <th>Difficulty</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Half-Day Rush</td>
-                        <td>3 hours</td>
-                        <td>Beginner</td>
-                        <td>$75</td>
-                    </tr>
-                    <!-- Add more rows -->
-                </tbody>
-            </table>
+        <section id="trip-table" class="trip-comparison">
+            <h2>Compare All Adventures</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Trip Name</th>
+                            <th>Duration</th>
+                            <th>Difficulty</th>
+                            <th>Age Range</th>
+                            <th>Price</th>
+                            <th>Season</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Half Day Adventure</td>
+                            <td>4 hours</td>
+                            <td><span class="difficulty-badge beginner">Beginner</span></td>
+                            <td>8+</td>
+                            <td>$89</td>
+                            <td>May-September</td>
+                        </tr>
+                        <tr>
+                            <td>Full Day Challenge</td>
+                            <td>8 hours</td>
+                            <td><span class="difficulty-badge intermediate">Intermediate</span></td>
+                            <td>12+</td>
+                            <td>$149</td>
+                            <td>June-August</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Day Expedition</td>
+                            <td>3 days</td>
+                            <td><span class="difficulty-badge advanced">Advanced</span></td>
+                            <td>16+</td>
+                            <td>$499</td>
+                            <td>July only</td>
+                        </tr>
+                        <tr>
+                            <td>Family Float</td>
+                            <td>2 hours</td>
+                            <td><span class="difficulty-badge beginner">Beginner</span></td>
+                            <td>5+</td>
+                            <td>$59</td>
+                            <td>June-August</td>
+                        </tr>
+                        <tr>
+                            <td>Extreme Whitewater</td>
+                            <td>6 hours</td>
+                            <td><span class="difficulty-badge expert">Expert</span></td>
+                            <td>18+</td>
+                            <td>$199</td>
+                            <td>July-August</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <h2>Ready to Make Memories?</h2>
+            <p>Our team is standing by to help you choose the perfect adventure for your group.</p>
+            <a href="contact.html" class="cta-button">Contact Our Experts</a>
         </section>
     </main>
 
     <footer>
-        <!-- Same footer as other pages -->
-        <p><a href="images/trips-wireframe.png" target="_blank">View Trips Page Wireframe</a></p>
+        <div class="footer-content">
+            <p>&copy; 2023 Whitewater Rafting Adventures | <a href="images/trips-wireframe.jpg" target="_blank">View Trips Page Wireframe</a></p>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
