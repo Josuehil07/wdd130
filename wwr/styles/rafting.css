@@ -788,4 +788,141 @@ footer a:hover {
     color: white;
     text-decoration: underline;
 }
+    /* ===== TRIPS PAGE SPECIFIC STYLES ===== */
+
+/* Header */
+.trips-header {
+    background-color: #381D2A;
+    padding: 1rem 2rem;
+}
+
+/* Hero Section */
+.trips-hero {
+    background: linear-gradient(rgba(57, 110, 148, 0.7), rgba(57, 110, 148, 0.7)), 
+                url('../images/trips-hero.jpg') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Trip Cards */
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-10px);
+}
+
+.trip-image-container {
+    position: relative;
+    height: 200px;
+}
+
+.trip-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.difficulty {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.difficulty.beginner {
+    background-color: #4CAF50;
+}
+
+.difficulty.intermediate {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.difficulty.advanced {
+    background-color: #F44336;
+}
+
+/* Table Styles */
+.trip-comparison {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #396E94;
+    color: white;
+}
+
+/* Footer */
+.trips-footer {
+    background-color: #381D2A;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .trip-cards {
+        grid-template-columns: 1fr;
+    }
+}
 }
