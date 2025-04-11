@@ -948,7 +948,7 @@ footer a:hover {
 /* ===== HERO SECTION FIX ===== */
 .hero {
     position: relative;
-    height: 80vh; /* Reduced height */
+    height: 50vh; /* Reduced height */
     margin-top: 0;
     overflow: hidden;
 }
