@@ -3,108 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafting Trips | Whitewater Adventures</title>
-    <meta name="description" content="Explore our thrilling whitewater rafting trips with detailed itineraries, photos, and pricing.">
+    <title>Whitewater Rafting Trips | Adventure Packages</title>
+    <meta name="description" content="Explore our thrilling rafting adventures. Half-day, full-day, and multi-day expeditions for all skill levels.">
     <link rel="stylesheet" href="styles/rafting.css">
+    <style>
+        /* Enhanced Trip Card Styles */
+        .trip-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(57, 110, 148, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .trip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(57, 110, 148, 0.25);
+        }
+        
+        .trip-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #E7C24F;
+            color: #381D2A;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .trip-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .trip-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .trip-card:hover .trip-image img {
+            transform: scale(1.05);
+        }
+        
+        /* Modern Tab Navigation */
+        .trip-nav {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .trip-nav button {
+            background: none;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin: 0 5px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #396E94;
+            position: relative;
+        }
+        
+        .trip-nav button.active {
+            color: #A43312;
+        }
+        
+        .trip-nav button.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15%;
+            width: 70%;
+            height: 3px;
+            background: #E7C24F;
+        }
+        
+        /* Enhanced Table Design */
+        .trip-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .trip-table th {
+            background: #381D2A;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .trip-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .trip-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Visual Flourishes */
+        .river-divider {
+            height: 30px;
+            background: url('images/wave-pattern.png') repeat-x;
+            margin: 2rem 0;
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body>
-    <header class="trips-header">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Whitewater Adventures Logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="trips.html" class="active">Trips</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <!-- Same header as contact.html -->
     </header>
 
-    <main class="trips-main">
-        <!-- Hero Banner -->
-        <section class="trips-hero">
+    <main class="trips-container">
+        <!-- Hero Section -->
+        <section class="trips-hero" style="background: linear-gradient(rgba(57, 110, 148, 0.8), url('images/trips-hero.jpg') center/cover;">
             <div class="hero-content">
                 <h1>Choose Your Adventure</h1>
-                <p>Experience the thrill of Idaho's best whitewater</p>
-                <a href="contact.html" class="cta-button">Book Your Trip Today</a>
+                <p>Experience the thrill of Idaho's wild rivers</p>
+                <a href="contact.html" class="cta-button">Book Your Trip</a>
             </div>
         </section>
 
-        <!-- Featured Trips -->
+        <!-- Trip Navigation -->
+        <nav class="trip-nav">
+            <button class="active">All Trips</button>
+            <button>Beginner</button>
+            <button>Advanced</button>
+            <button>Family</button>
+        </nav>
+
+        <div class="river-divider"></div>
+
+        <!-- Featured Trips Grid -->
         <section class="featured-trips">
-            <h2>Our Popular Packages</h2>
-            <div class="trip-cards">
+            <h2 class="section-title">Our Signature Experiences</h2>
+            <div class="trip-grid">
                 <!-- Trip 1 -->
                 <article class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/half-day.jpg" alt="Half Day Adventure">
-                        <span class="difficulty beginner">Beginner</span>
+                    <div class="trip-badge">BEST SELLER</div>
+                    <div class="trip-image">
+                        <img src="images/trip1.jpg" alt="Half Day Adventure">
                     </div>
-                    <div class="trip-details">
+                    <div class="trip-content">
                         <h3>Half Day Adventure</h3>
-                        <p>Perfect for families and first-timers with mild rapids and beautiful scenery.</p>
-                        <ul>
-                            <li><strong>Duration:</strong> 4 hours</li>
-                            <li><strong>Rapids:</strong> Class II-III</li>
-                            <li><strong>Price:</strong> $89/person</li>
-                        </ul>
-                        <a href="#trip-table" class="secondary-btn">More Info</a>
+                        <div class="trip-meta">
+                            <span class="duration">4 hours</span>
+                            <span class="difficulty beginner">Beginner</span>
+                            <span class="price">$89</span>
+                        </div>
+                        <p>Perfect introduction to whitewater rafting with Class II-III rapids and calm swimming spots.</p>
+                        <a href="#trip-details" class="btn-secondary">View Details</a>
                     </div>
                 </article>
 
                 <!-- Trip 2 -->
                 <article class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/full-day.jpg" alt="Full Day Challenge">
-                        <span class="difficulty intermediate">Intermediate</span>
+                    <div class="trip-badge">NEW</div>
+                    <div class="trip-image">
+                        <img src="images/trip2.jpg" alt="Full Day Challenge">
                     </div>
-                    <div class="trip-details">
+                    <div class="trip-content">
                         <h3>Full Day Challenge</h3>
-                        <p>Our most popular trip featuring exciting rapids and riverside lunch.</p>
-                        <ul>
-                            <li><strong>Duration:</strong> 8 hours</li>
-                            <li><strong>Rapids:</strong> Class III-IV</li>
-                            <li><strong>Price:</strong> $149/person</li>
-                        </ul>
-                        <a href="#trip-table" class="secondary-btn">More Info</a>
+                        <div class="trip-meta">
+                            <span class="duration">8 hours</span>
+                            <span class="difficulty intermediate">Intermediate</span>
+                            <span class="price">$149</span>
+                        </div>
+                        <p>Our most popular trip featuring exciting rapids with a riverside lunch included.</p>
+                        <a href="#trip-details" class="btn-secondary">View Details</a>
                     </div>
                 </article>
 
                 <!-- Trip 3 -->
                 <article class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/multi-day.jpg" alt="Multi-Day Expedition">
-                        <span class="difficulty advanced">Advanced</span>
+                    <div class="trip-image">
+                        <img src="images/trip3.jpg" alt="Multi-Day Expedition">
                     </div>
-                    <div class="trip-details">
+                    <div class="trip-content">
                         <h3>Multi-Day Expedition</h3>
-                        <p>Ultimate adventure with overnight camping under the stars.</p>
-                        <ul>
-                            <li><strong>Duration:</strong> 3 days</li>
-                            <li><strong>Rapids:</strong> Class IV-V</li>
-                            <li><strong>Price:</strong> $499/person</li>
-                        </ul>
-                        <a href="#trip-table" class="secondary-btn">More Info</a>
+                        <div class="trip-meta">
+                            <span class="duration">3 days</span>
+                            <span class="difficulty advanced">Advanced</span>
+                            <span class="price">$499</span>
+                        </div>
+                        <p>Ultimate adventure with Class IV-V rapids and overnight camping under the stars.</p>
+                        <a href="#trip-details" class="btn-secondary">View Details</a>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Trip Comparison Table -->
-        <section id="trip-table" class="trip-comparison">
-            <h2>Complete Trip Comparison</h2>
-            <div class="table-wrapper">
-                <table>
+        <div class="river-divider"></div>
+
+        <!-- Trip Comparison -->
+        <section id="trip-details" class="trip-comparison">
+            <h2 class="section-title">Trip Comparison</h2>
+            <div class="table-container">
+                <table class="trip-table">
                     <thead>
                         <tr>
-                            <th>Trip Name</th>
+                            <th>Trip</th>
                             <th>Duration</th>
                             <th>Difficulty</th>
-                            <th>Age Minimum</th>
+                            <th>Age Range</th>
                             <th>Price</th>
-                            <th>Season</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,33 +221,27 @@
                             <td>Half Day Adventure</td>
                             <td>4 hours</td>
                             <td><span class="difficulty beginner">Beginner</span></td>
-                            <td>8 years</td>
+                            <td>8+</td>
                             <td>$89</td>
-                            <td>May-September</td>
+                            <td><a href="contact.html" class="btn-small">Book</a></td>
                         </tr>
-                        <!-- Additional rows for other trips -->
+                        <!-- Additional trip rows -->
                     </tbody>
                 </table>
             </div>
         </section>
 
         <!-- Final CTA -->
-        <section class="trips-cta">
-            <h2>Have Questions About Our Trips?</h2>
-            <p>Our adventure specialists are ready to help you choose the perfect experience.</p>
-            <a href="contact.html" class="cta-button">Contact Our Team</a>
+        <section class="cta-section">
+            <h2>Ready for Your Adventure?</h2>
+            <p>Our team is ready to help you plan the perfect river experience</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
         </section>
     </main>
 
-    <footer class="trips-footer">
-        <div class="footer-content">
-            <p>&copy; 2023 Whitewater Adventures | <a href="images/trips-wireframe.png" target="_blank">View Page Wireframe</a></p>
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-            </div>
-        </div>
+    <footer>
+        <!-- Same footer as contact.html with wireframe link -->
+        <p><a href="images/trips-wireframe.jpg" target="_blank">View Page Wireframe</a></p>
     </footer>
 </body>
 </html>
