@@ -130,7 +130,21 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+        .wireframe-link {
+    margin-top: 15px;
+}
+
+.wireframe-link a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.wireframe-link a:hover {
+    color: white;
+    text-decoration: underline;
+}
         footer {
             background-color: var(--dark);
             color: white;
@@ -143,6 +157,7 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            
         }
     </style>
 </head>
