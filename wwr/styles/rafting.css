@@ -945,18 +945,16 @@ footer a:hover {
     width: 100%;
 }
 
-/* ===== HERO SECTION FIX ===== */
+/* ===== HERO FIX ===== */
 .hero {
     position: relative;
-    height: calc(100vh - [header height]px); }
+    height: 500px; /* Fixed pixel height */
     margin-top: 0;
     overflow: hidden;
 }
 
 .hero-image {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -965,7 +963,7 @@ footer a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%; /* Adjusts image cropping */
+    object-position: center 35%; /* Adjust this to show best part of image */
 }
 
 .hero-content {
@@ -977,11 +975,10 @@ footer a:hover {
     align-items: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     z-index: 10;
+    padding: 0 20px;
 }
-    align-items: center;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
