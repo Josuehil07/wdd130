@@ -792,9 +792,10 @@ footer a:hover {
 
 /* ===== HEADER FIX ===== */
 .main-header {
-    position: relative;
+    position: relative; /* Not fixed or absolute */
     background: #381D2A;
-    padding: 15px 20px;
+    padding: 15px 0;
+    width: 100%;
     z-index: 100;
 }
 
@@ -812,15 +813,18 @@ footer a:hover {
 
 .hero-image {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 35%; /* Adjust crop position */
 }
 
 .hero-content {
@@ -828,8 +832,8 @@ footer a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     width: 100%;
+    text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     padding: 0 20px;
