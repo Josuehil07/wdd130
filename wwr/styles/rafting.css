@@ -793,7 +793,7 @@ footer a:hover {
 /* ===== HEADER FIX ===== */
 .main-header {
     position: relative; /* Required for z-index */
-    z-index: 1000; /* High value to keep header on top */
+    z-index: 100; /* High value to keep header on top */
     background: #381D2A;
     width: 100%;
     padding: 15px 0;
