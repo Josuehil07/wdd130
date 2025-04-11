@@ -792,8 +792,8 @@ footer a:hover {
 
 /* ===== HEADER FIX ===== */
 .main-header {
-    position: relative; /* Changed from your original 'position: relative' */
-    z-index: 1000; /* High value to ensure it stays on top */
+    position: relative; /* Required for z-index */
+    z-index: 1000; /* High value to keep header on top */
     background: #381D2A;
     width: 100%;
     padding: 15px 0;
@@ -805,21 +805,22 @@ footer a:hover {
 }
 
 /* ===== HERO FIX ===== */
-.hero {
+..hero {
     position: relative;
-    height: 500px; /* Adjust as needed */
-    margin-top: 80px; /* Adjust based on header height */
+    margin-top: 0; /* Remove any default margin */
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .hero-content {
@@ -827,9 +828,7 @@ footer a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 10; /* Above the hero image but below header */
+    z-index: 10; /* Above hero image but below header */
 }
 
 /* ===== CONTENT SPACING ===== */
