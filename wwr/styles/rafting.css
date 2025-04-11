@@ -808,7 +808,7 @@ footer a:hover {
 .hero {
     position: relative;
     height: 500px; /* Adjust as needed */
-    margin-top: 0; /* Ensure no gap between header and hero */
+    margin-top: 80px; /* Adjust based on header height */
 }
 
 .hero-image {
