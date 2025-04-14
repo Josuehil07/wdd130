@@ -1,4 +1,4 @@
-/* Contact Page Specific Styles */
+/*Contact page*/
 .contact-hero {
     background: url('../images/rafting-hero.jpg') center/cover;
     height: 300px;
@@ -143,4 +143,9 @@
         flex-direction: column;
         align-items: center;
     }
+}
+footer .sociallinks img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
