@@ -659,4 +659,177 @@ main {
         width: 100%;
     }
 }
+/* ===== CONTAINER CLASS (Global) ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== TRIPS PAGE STYLES ===== */
+
+/* Hero Section */
+.trips-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/trips-hero.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Tabs */
+.trip-nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+}
+
+.trip-nav button {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #396E94;
+    position: relative;
+}
+
+.trip-nav button.active {
+    color: #A43312;
+}
+
+.trip-nav button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background: #E7C24F;
+}
+
+/* River Divider */
+.river-divider {
+    height: 30px;
+    background: url('../images/wave-pattern.png') repeat-x;
+    margin: 2rem 0;
+    opacity: 0.6;
+}
+
+/* Featured Trips */
+.featured-trips {
+    padding: 2rem 0;
+}
+
+.featured-trips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #396E94;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(57, 110, 148, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(57, 110, 148, 0.25);
+}
+
+.trip-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #E7C24F;
+    color: #381D2A;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.trip-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.trip-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.trip-card:hover .trip-image img {
+    transform: scale(1.05);
+}
+
+.trip-content {
+    padding: 1.5rem;
+}
+
+.trip-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.duration, .price {
+    color: #333;
+}
+
+.difficulty {
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.difficulty.beginner {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.difficulty.intermediate {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.difficulty.advanced {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Buttons */
+.btn-secondary,
+.btn-small {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    color: #396E94;
+    text-decoration: none;
 
